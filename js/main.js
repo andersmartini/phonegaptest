@@ -19,6 +19,7 @@ var app = {
             self.showAlert("MemoryStore initiated!", "Info")
         });
         $('.search-key').on('keyup', $.proxy(this.findByName, this));
+        this.renderHomeView();
     },
 
     showAlert: function(message, title){
