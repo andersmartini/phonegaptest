@@ -1,6 +1,7 @@
 var app = {
 
     findByName: function() {
+        var self = this;
         this.store.findByName($('.search-key').val(), function(employees) {
             var l = employees.length;
             var e;
@@ -31,7 +32,7 @@ var app = {
     renderHomeView: function(){
 
         $("body").html(this.homeTpl())
-        $(".search-key").on("keyup", $proxy(this.findByName(this)))
+        $(".search-key").on("keyup", $.proxy(this.findByName(this)))
     }
 
 };
